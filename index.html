@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="#" class="login">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                    <i class='bx bx-lock'></i>
+                </div>
+                <div class="forget-section">
+                    <p><input type="checkbox" name="" id="">Remember me</p>
+                    <a href="forget_password.html">Forgot password ?</a>
+                </div>
+                <input type="submit" class="btn" value="Sign in">
+                <div class="account-creation">
+                    <Span>Don't have an account ? <a href="#" class="RegisterLink">Register</a></Span>
+                </div>
+                <div class="social-login">
+                    <p>Or sign in with</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+                    </div>
+                </div>
+            </form>
+            <form action="#" class="register">
+                <h2>Register</h2>
+                <div class="input-box">
+                    <input type="text" required>
+                    <label for="">Username</label>
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label for="">Password</label>
+                    <i class='bx bx-lock'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label for="">Password again</label>
+                    <i class='bx bx-lock'></i>
+                </div>
+                <input type="submit" class="btn" value="Sign up">
+                <div class="account-creation">
+                    <Span>Already have an account ? <a href="#" class="LoginLink">Login</a></Span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const LoginForm=document.querySelector('.login');
+        const RegisterForm=document.querySelector('.register');
+        const RegisterLink=document.querySelector('.RegisterLink');
+        const LoginLink=document.querySelector('.LoginLink');
+        RegisterLink.onclick=()=>{
+            RegisterForm.classList.add('active');
+            LoginForm.classList.add('active');
+        }
+        LoginLink.onclick=()=>{
+            RegisterForm.classList.remove('active');
+            LoginForm.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
